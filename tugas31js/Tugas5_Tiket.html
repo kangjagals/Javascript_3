@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas 5</title>
+    <style>
+      span {
+        visibility: hidden;
+      }
+
+      h1 {
+        visibility: hidden;
+      }
+      #nama {
+         box-sizing: border-box 10px;
+      }
+    </style>
+  </head>
+  <body>
+ <h3 style="align-content: center;"> Pemesanan Tiket</h3>
+     <div >
+      <input style="border-inline-color: #000000;" id="nama" type="text" placeholder="masukan nama" />
+      <span style="color: blue">Nama tidak boleh kosong</span>
+      <br />
+      <input style="border-inline-color: #000000;" id="email" type="email" placeholder="masukan email anda" />
+      <span style="color: blue">email tidak boleh ksong</span>
+      <br />
+      <input style="border-inline-color: #000000;" id="jam" type="time" />
+      <span style="color: blue">jam tidak boleh kosong</span>
+      <br />
+      <input style="border-inline-color: #000000;" id="tujuan" type="text" placeholder="Tujuan keberangkatan" />
+      <span style="color: blue">Tujuan keberangkatan tidak boleh kosong</span>
+      <br />
+      <input style="border-inline-color: #000000;" id="tiket" type="number" placeholder="masukan jumlah tiket" />
+      <span style="color: blue">jumlah tiket tidak boleh kosong</span>
+      <br />
+      <br />
+      <button style="color: crimson" onclick="proses()">kirim</button>
+  
+      <h1>sukses</h1>
+  
+     </div>
+    
+    <script>
+      let nama = document.getElementById("nama");
+      let email = document.getElementById("email");
+      let jam = document.getElementById("jam");
+      let tujuan = document.getElementById("tujuan");
+      let tiket = document.getElementById("tiket");
+      let span = document.getElementsByTagName("span");
+
+      function proses() {
+        if (nama.value == "") {
+          span[0].style.visibility = "visible";
+        }
+        if (email.value == "") {
+          span[1].style.visibility = "visible";
+        }
+        if (jam.value == "") {
+          span[2].style.visibility = "visible";
+        }
+        if (tujuan.value == "") {
+          span[3].style.visibility = "visible";
+        }
+        if (tiket.value == "") {
+          span[4].style.visibility = "visible";
+        }
+      }
+    </script>
+  </body>
+</html>
